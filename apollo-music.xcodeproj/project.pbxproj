@@ -1,0 +1,400 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 52;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3F78D260255067EE00AB5711 /* SwordRPC in Frameworks */ = {isa = PBXBuildFile; productRef = 3F78D25F255067EE00AB5711 /* SwordRPC */; };
+		3FA450DC254F46E50063B4C5 /* MediaRemote.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FA450DB254F46E50063B4C5 /* MediaRemote.framework */; };
+		3FD93F70254F14C100607296 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FD93F6F254F14C100607296 /* AppDelegate.swift */; };
+		3FD93F74254F14C200607296 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3FD93F73254F14C200607296 /* Assets.xcassets */; };
+		3FD93F77254F14C200607296 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3FD93F75254F14C200607296 /* Main.storyboard */; };
+		3FE66A9C254F49B500331E85 /* NowPlaying.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE66A9B254F49B500331E85 /* NowPlaying.swift */; };
+		3FE66A9F254F4BA300331E85 /* MediaPlayerHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE66A9E254F4BA200331E85 /* MediaPlayerHelper.swift */; };
+		3FE66ABF255060C400331E85 /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE66ABE255060C400331E85 /* AboutViewController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		3FA450CB254F43600063B4C5 /* apollo-music-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "apollo-music-Bridging-Header.h"; sourceTree = "<group>"; };
+		3FA450DB254F46E50063B4C5 /* MediaRemote.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaRemote.framework; path = ../../../../System/Library/PrivateFrameworks/MediaRemote.framework; sourceTree = "<group>"; };
+		3FD93F6C254F14C100607296 /* Apollo Music.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Apollo Music.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3FD93F6F254F14C100607296 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		3FD93F73254F14C200607296 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		3FD93F76254F14C200607296 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		3FD93F78254F14C200607296 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3FD93F79254F14C200607296 /* apollo-music.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "apollo-music.entitlements"; sourceTree = "<group>"; };
+		3FE66A9B254F49B500331E85 /* NowPlaying.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NowPlaying.swift; sourceTree = "<group>"; };
+		3FE66A9E254F4BA200331E85 /* MediaPlayerHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaPlayerHelper.swift; sourceTree = "<group>"; };
+		3FE66ABE255060C400331E85 /* AboutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3FD93F69254F14C100607296 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3F78D260255067EE00AB5711 /* SwordRPC in Frameworks */,
+				3FA450DC254F46E50063B4C5 /* MediaRemote.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3FA450DA254F46E50063B4C5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3FA450DB254F46E50063B4C5 /* MediaRemote.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		3FD93F63254F14C100607296 = {
+			isa = PBXGroup;
+			children = (
+				3FD93F6E254F14C100607296 /* apollo-music */,
+				3FD93F6D254F14C100607296 /* Products */,
+				3FA450DA254F46E50063B4C5 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		3FD93F6D254F14C100607296 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3FD93F6C254F14C100607296 /* Apollo Music.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3FD93F6E254F14C100607296 /* apollo-music */ = {
+			isa = PBXGroup;
+			children = (
+				3FD93F6F254F14C100607296 /* AppDelegate.swift */,
+				3FD93F73254F14C200607296 /* Assets.xcassets */,
+				3FD93F79254F14C200607296 /* apollo-music.entitlements */,
+				3FA450CB254F43600063B4C5 /* apollo-music-Bridging-Header.h */,
+				3FD93F78254F14C200607296 /* Info.plist */,
+				3FD93F75254F14C200607296 /* Main.storyboard */,
+				3FE66A9E254F4BA200331E85 /* MediaPlayerHelper.swift */,
+				3FE66A9B254F49B500331E85 /* NowPlaying.swift */,
+				3FE66ABE255060C400331E85 /* AboutViewController.swift */,
+			);
+			path = "apollo-music";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		3FD93F6B254F14C100607296 /* Apollo Music */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3FD93F7C254F14C200607296 /* Build configuration list for PBXNativeTarget "Apollo Music" */;
+			buildPhases = (
+				3FD93F68254F14C100607296 /* Sources */,
+				3FD93F69254F14C100607296 /* Frameworks */,
+				3FD93F6A254F14C100607296 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Apollo Music";
+			packageProductDependencies = (
+				3F78D25F255067EE00AB5711 /* SwordRPC */,
+			);
+			productName = "discord-amusic-richpresence";
+			productReference = 3FD93F6C254F14C100607296 /* Apollo Music.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3FD93F64254F14C100607296 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1210;
+				LastUpgradeCheck = 1210;
+				TargetAttributes = {
+					3FD93F6B254F14C100607296 = {
+						CreatedOnToolsVersion = 12.1;
+						LastSwiftMigration = 1210;
+					};
+				};
+			};
+			buildConfigurationList = 3FD93F67254F14C100607296 /* Build configuration list for PBXProject "apollo-music" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 3FD93F63254F14C100607296;
+			packageReferences = (
+				3F78D25E255067EE00AB5711 /* XCRemoteSwiftPackageReference "SwordRPC" */,
+			);
+			productRefGroup = 3FD93F6D254F14C100607296 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3FD93F6B254F14C100607296 /* Apollo Music */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3FD93F6A254F14C100607296 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3FD93F74254F14C200607296 /* Assets.xcassets in Resources */,
+				3FD93F77254F14C200607296 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3FD93F68254F14C100607296 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3FD93F70254F14C100607296 /* AppDelegate.swift in Sources */,
+				3FE66A9C254F49B500331E85 /* NowPlaying.swift in Sources */,
+				3FE66ABF255060C400331E85 /* AboutViewController.swift in Sources */,
+				3FE66A9F254F4BA300331E85 /* MediaPlayerHelper.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		3FD93F75254F14C200607296 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3FD93F76254F14C200607296 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		3FD93F7A254F14C200607296 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		3FD93F7B254F14C200607296 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		3FD93F7D254F14C200607296 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = "apollo-music/apollo-music.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 201102;
+				DEVELOPMENT_TEAM = B33W4V4JR8;
+				ENABLE_HARDENED_RUNTIME = YES;
+				INFOPLIST_FILE = "apollo-music/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "pt.pedrocavaleiro.macos.apollo-music";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "apollo-music/apollo-music-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				SYSTEM_FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SYSTEM_LIBRARY_DIR)/PrivateFrameworks",
+				);
+			};
+			name = Debug;
+		};
+		3FD93F7E254F14C200607296 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = "apollo-music/apollo-music.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 201102;
+				DEVELOPMENT_TEAM = B33W4V4JR8;
+				ENABLE_HARDENED_RUNTIME = YES;
+				INFOPLIST_FILE = "apollo-music/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "pt.pedrocavaleiro.macos.apollo-music";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "apollo-music/apollo-music-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
+				SYSTEM_FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SYSTEM_LIBRARY_DIR)/PrivateFrameworks",
+				);
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3FD93F67254F14C100607296 /* Build configuration list for PBXProject "apollo-music" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3FD93F7A254F14C200607296 /* Debug */,
+				3FD93F7B254F14C200607296 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3FD93F7C254F14C200607296 /* Build configuration list for PBXNativeTarget "Apollo Music" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3FD93F7D254F14C200607296 /* Debug */,
+				3FD93F7E254F14C200607296 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		3F78D25E255067EE00AB5711 /* XCRemoteSwiftPackageReference "SwordRPC" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/PedroCavaleiro/SwordRPC.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.2.4;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		3F78D25F255067EE00AB5711 /* SwordRPC */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3F78D25E255067EE00AB5711 /* XCRemoteSwiftPackageReference "SwordRPC" */;
+			productName = SwordRPC;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = 3FD93F64254F14C100607296 /* Project object */;
+}
