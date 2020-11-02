@@ -35,6 +35,7 @@ Follow the above steps until step 3, then:
 - [ ] Create Windows Applet
 - [ ] Toggle Start with System
 - [ ] Toggle Show emojis
+- [ ] Add support to previous versions of macOS (iTunes)
 
 ## Collaboration
 
