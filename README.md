@@ -30,6 +30,12 @@ Follow the above steps until step 3, then:
 
 ![Discord Rich Status](https://raw.githubusercontent.com/PedroCavaleiro/Apollo-Music/main/screenshots/discord_status.png)
 
+## To-Do
+
+- [ ] Create Windows Applet
+- [ ] Toggle Start with System
+- [ ] Toggle Show emojis
+
 ## Collaboration
 
 Feel free to help improve this applet by submitting issues and or pull requests.
@@ -42,3 +48,7 @@ When submitting an issue be sure to include the version of your macOS, Discord a
 
 * [SwordRPC Package](https://github.com/SuperMarcus/SwordRPC) from [Marcus Zhou's](https://github.com/SuperMarcus) fork
 * Logo from [Kevin M.'s](https://github.com/kkevinm) [iTunes Discord RP](https://github.com/kkevinm/iTunes-Discord-RP)
+
+## Notes
+
+So far it's not possible to remove the "Playing a Game" as this uses the Discord Game SDK and so far I haven't found a way to work around this.
