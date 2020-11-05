@@ -1,6 +1,12 @@
 # Apollo Music
 Apollo Music is a macOS applet that displays what you're listening in the macOS Music app.
 
+## Requirements
+
+* macOS 10.15 or above (tested on macOS Big Sur 11.0.1)
+* Discord
+* Music App (doesn't require Apple Music subscription as it only show's what you're playing using the Music App)
+
 ## How to install
 
 * Download the latest [release](https://github.com/PedroCavaleiro/Apollo-Music/releases/tag/1.0) currently 1.0
