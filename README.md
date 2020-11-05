@@ -21,8 +21,8 @@ Apollo Music is a macOS applet that displays what you're listening in the macOS 
 ## To-Do
 
 - [ ] Create Windows Applet
-- [ * ] Toggle Start with System
-- [ * ] Toggle Show emojis
+- [x] Toggle Start with System
+- [x] Toggle Show emojis
 - [ ] Add support to previous versions of macOS (iTunes)
 - [ ] Force reconnect to Discord
 
