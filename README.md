@@ -37,6 +37,7 @@ When submitting an issue be sure to include the version of your macOS, Discord a
 ## Credits
 
 * [SwordRPC Package](https://github.com/SuperMarcus/SwordRPC) from [Marcus Zhou's](https://github.com/SuperMarcus) fork
+* [LaunchAtLogin Package](https://github.com/sindresorhus/LaunchAtLogin) from [Sindre Sorhus](https://github.com/sindresorhus)
 * Logo from [Kevin M.'s](https://github.com/kkevinm) [iTunes Discord RP](https://github.com/kkevinm/iTunes-Discord-RP)
 
 ## Notes
