@@ -9,7 +9,7 @@ Apollo Music is a macOS applet that displays what you're listening in the macOS 
 
 ## How to install
 
-* Download the latest [release](https://github.com/PedroCavaleiro/Apollo-Music/releases/tag/1.0) currently 1.0
+* Download the latest [release](https://github.com/PedroCavaleiro/Apollo-Music/releases/tag/1.1) currently 1.1
 * Open the dmg file
 * Drag the app to the `Applications` folder
 
