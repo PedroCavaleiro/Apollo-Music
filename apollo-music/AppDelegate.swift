@@ -7,6 +7,7 @@
 
 import Cocoa
 import SwordRPC
+import LaunchAtLogin
 
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate, NSMenuDelegate {
@@ -14,8 +15,8 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSMenuDelegate {
     var statusItem: NSStatusItem?
     @IBOutlet weak var menu: NSMenu!
     @IBOutlet weak var connectionStatus: NSMenuItem!
-    
-    let mediaPlayerHelper = MediaPlayerHelper()
+    @IBOutlet weak var showEmojisToggle: NSMenuItem!
+    @IBOutlet weak var launchAtLoginToggle: NSMenuItem!
     
     var rpc: SwordRPC?
     
@@ -30,6 +31,9 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSMenuDelegate {
     }
     
     func applicationDidFinishLaunching(_ aNotification: Notification) {
+        showEmojisToggle.state = Settings.shared.showEmojis ? NSControl.StateValue.on : NSControl.StateValue.off
+        launchAtLoginToggle.state = LaunchAtLogin.isEnabled ? NSControl.StateValue.on : NSControl.StateValue.off
+        
         NotificationCenter.default.addObserver(self, selector: #selector(mediaPlaybackChanged(_:)), name: MediaPlayerHelper.kNowPlayingItemDidChange, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(playingStatusChanged(_:)), name: MediaPlayerHelper.kNowPlayingStatusChange, object: nil)
         configureRPC()
@@ -41,7 +45,7 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSMenuDelegate {
             self.isStartup = false
             self.rcpConnected = true
             self.connectionStatus.title = "Connected to Discord"
-            if self.mediaPlayerHelper.nowPlayingItem.playing {
+            if MediaPlayerHelper.shared.nowPlayingItem.playing {
                 self.configureRichPresence()
             }
         }
@@ -77,7 +81,7 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSMenuDelegate {
     }
     
     @objc func playingStatusChanged(_ notification: Notification) {
-        if mediaPlayerHelper.nowPlayingItem.playing {
+        if MediaPlayerHelper.shared.nowPlayingItem.playing {
             configureRichPresence()
         } else {
             rpc!.disconnect()
@@ -93,8 +97,8 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSMenuDelegate {
     func configureRichPresence() {
         if rcpConnected {
             var presence = RichPresence()
-            presence.details = "🎵 \(mediaPlayerHelper.nowPlayingItem.title ?? "  ")"
-            presence.state = "👤 \(mediaPlayerHelper.nowPlayingItem.artist ?? "  ")"
+            presence.details = "\(Settings.shared.showEmojis ? "🎵 " : "")\(MediaPlayerHelper.shared.nowPlayingItem.title ?? "  ")"
+            presence.state = "\(Settings.shared.showEmojis ? "👤 " : "by ")\(MediaPlayerHelper.shared.nowPlayingItem.artist ?? "  ")"
             presence.assets.largeImage = "apple_music_icon_rounded"
             presence.assets.largeText = "Apple Music"
             self.rpc!.setPresence(presence)
@@ -108,5 +112,26 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSMenuDelegate {
         }
     }
 
+    @IBAction func showEmojis(_ sender: Any) {
+        if (sender as! NSMenuItem).state == .on {
+            Settings.shared.showEmojis = false
+            
+        } else {
+            Settings.shared.showEmojis = true
+        }
+        (sender as! NSMenuItem).state = Settings.shared.showEmojis ? NSControl.StateValue.on : NSControl.StateValue.off
+        configureRichPresence()
+    }
+    
+    @IBAction func launchAtLogin(_ sender: Any) {
+        if (sender as! NSMenuItem).state == .on {
+            LaunchAtLogin.isEnabled = false
+            
+        } else {
+            LaunchAtLogin.isEnabled = true
+        }
+        (sender as! NSMenuItem).state = LaunchAtLogin.isEnabled ? NSControl.StateValue.on : NSControl.StateValue.off
+    }
+    
 }
 

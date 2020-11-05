@@ -9,12 +9,14 @@ import Foundation
 
 class MediaPlayerHelper {
     
+    static let shared = MediaPlayerHelper()
+    
     public static let kNowPlayingItemDidChange = Notification.Name(rawValue: "kNowPlayingItemDidChange")
     public static let kNowPlayingStatusChange = Notification.Name(rawValue: "kNowPlayingStatusChange")
     
     public let nowPlayingItem = NowPlaying()
     
-    init() {
+    private init() {
         MRMediaRemoteRegisterForNowPlayingNotifications(DispatchQueue.global(qos: .utility))
         updateCurrentPlayingApp()
         updateCurrentPlayingState()

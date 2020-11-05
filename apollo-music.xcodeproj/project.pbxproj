@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3F13408125540DAB00630CA1 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F13408025540DAB00630CA1 /* Settings.swift */; };
+		3F4BC9C22554250B0023752D /* LaunchAtLogin in Frameworks */ = {isa = PBXBuildFile; productRef = 3F4BC9C12554250B0023752D /* LaunchAtLogin */; };
 		3F78D260255067EE00AB5711 /* SwordRPC in Frameworks */ = {isa = PBXBuildFile; productRef = 3F78D25F255067EE00AB5711 /* SwordRPC */; };
 		3FA450DC254F46E50063B4C5 /* MediaRemote.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FA450DB254F46E50063B4C5 /* MediaRemote.framework */; };
 		3FD93F70254F14C100607296 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FD93F6F254F14C100607296 /* AppDelegate.swift */; };
@@ -18,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3F13408025540DAB00630CA1 /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
 		3FA450CB254F43600063B4C5 /* apollo-music-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "apollo-music-Bridging-Header.h"; sourceTree = "<group>"; };
 		3FA450DB254F46E50063B4C5 /* MediaRemote.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaRemote.framework; path = ../../../../System/Library/PrivateFrameworks/MediaRemote.framework; sourceTree = "<group>"; };
 		3FD93F6C254F14C100607296 /* Apollo Music.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Apollo Music.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -36,6 +39,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3F4BC9C22554250B0023752D /* LaunchAtLogin in Frameworks */,
 				3F78D260255067EE00AB5711 /* SwordRPC in Frameworks */,
 				3FA450DC254F46E50063B4C5 /* MediaRemote.framework in Frameworks */,
 			);
@@ -81,6 +85,7 @@
 				3FE66A9E254F4BA200331E85 /* MediaPlayerHelper.swift */,
 				3FE66A9B254F49B500331E85 /* NowPlaying.swift */,
 				3FE66ABE255060C400331E85 /* AboutViewController.swift */,
+				3F13408025540DAB00630CA1 /* Settings.swift */,
 			);
 			path = "apollo-music";
 			sourceTree = "<group>";
@@ -95,6 +100,7 @@
 				3FD93F68254F14C100607296 /* Sources */,
 				3FD93F69254F14C100607296 /* Frameworks */,
 				3FD93F6A254F14C100607296 /* Resources */,
+				3F59AD7D25542ABA0055A310 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -103,6 +109,7 @@
 			name = "Apollo Music";
 			packageProductDependencies = (
 				3F78D25F255067EE00AB5711 /* SwordRPC */,
+				3F4BC9C12554250B0023752D /* LaunchAtLogin */,
 			);
 			productName = "discord-amusic-richpresence";
 			productReference = 3FD93F6C254F14C100607296 /* Apollo Music.app */;
@@ -134,6 +141,7 @@
 			mainGroup = 3FD93F63254F14C100607296;
 			packageReferences = (
 				3F78D25E255067EE00AB5711 /* XCRemoteSwiftPackageReference "SwordRPC" */,
+				3F4BC9C02554250B0023752D /* XCRemoteSwiftPackageReference "LaunchAtLogin" */,
 			);
 			productRefGroup = 3FD93F6D254F14C100607296 /* Products */;
 			projectDirPath = "";
@@ -156,6 +164,26 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		3F59AD7D25542ABA0055A310 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${BUILT_PRODUCTS_DIR}/LaunchAtLogin_LaunchAtLogin.bundle/Contents/Resources/copy-helper-swiftpm.sh\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		3FD93F68254F14C100607296 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -165,6 +193,7 @@
 				3FE66A9C254F49B500331E85 /* NowPlaying.swift in Sources */,
 				3FE66ABF255060C400331E85 /* AboutViewController.swift in Sources */,
 				3FE66A9F254F4BA300331E85 /* MediaPlayerHelper.swift in Sources */,
+				3F13408125540DAB00630CA1 /* Settings.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -306,7 +335,7 @@
 				CODE_SIGN_ENTITLEMENTS = "apollo-music/apollo-music.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 201102;
+				CURRENT_PROJECT_VERSION = 201105;
 				DEVELOPMENT_TEAM = B33W4V4JR8;
 				ENABLE_HARDENED_RUNTIME = YES;
 				INFOPLIST_FILE = "apollo-music/Info.plist";
@@ -314,6 +343,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = "pt.pedrocavaleiro.macos.apollo-music";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "apollo-music/apollo-music-Bridging-Header.h";
@@ -335,7 +365,7 @@
 				CODE_SIGN_ENTITLEMENTS = "apollo-music/apollo-music.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 201102;
+				CURRENT_PROJECT_VERSION = 201105;
 				DEVELOPMENT_TEAM = B33W4V4JR8;
 				ENABLE_HARDENED_RUNTIME = YES;
 				INFOPLIST_FILE = "apollo-music/Info.plist";
@@ -343,6 +373,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = "pt.pedrocavaleiro.macos.apollo-music";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "apollo-music/apollo-music-Bridging-Header.h";
@@ -378,6 +409,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		3F4BC9C02554250B0023752D /* XCRemoteSwiftPackageReference "LaunchAtLogin" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/sindresorhus/LaunchAtLogin";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.0.0;
+			};
+		};
 		3F78D25E255067EE00AB5711 /* XCRemoteSwiftPackageReference "SwordRPC" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/PedroCavaleiro/SwordRPC.git";
@@ -389,6 +428,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		3F4BC9C12554250B0023752D /* LaunchAtLogin */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3F4BC9C02554250B0023752D /* XCRemoteSwiftPackageReference "LaunchAtLogin" */;
+			productName = LaunchAtLogin;
+		};
 		3F78D25F255067EE00AB5711 /* SwordRPC */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 3F78D25E255067EE00AB5711 /* XCRemoteSwiftPackageReference "SwordRPC" */;

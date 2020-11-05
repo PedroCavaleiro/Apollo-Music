@@ -23,6 +23,19 @@
                                             <modifierMask key="keyEquivalentModifierMask"/>
                                         </menuItem>
                                         <menuItem isSeparatorItem="YES" id="ycm-AI-7ES"/>
+                                        <menuItem title="Launch at Login" id="c7k-Pk-VpV">
+                                            <modifierMask key="keyEquivalentModifierMask"/>
+                                            <connections>
+                                                <action selector="launchAtLogin:" target="Voe-Tx-rLC" id="ZDU-gc-DrT"/>
+                                            </connections>
+                                        </menuItem>
+                                        <menuItem title="Show Emojis" id="Np6-vA-djK" userLabel="Show Emojis">
+                                            <modifierMask key="keyEquivalentModifierMask"/>
+                                            <connections>
+                                                <action selector="showEmojis:" target="Voe-Tx-rLC" id="iCX-Mu-6AQ"/>
+                                            </connections>
+                                        </menuItem>
+                                        <menuItem isSeparatorItem="YES" id="sEU-jd-UYN"/>
                                         <menuItem title="About Apollo Music" id="5kV-Vb-QxS">
                                             <modifierMask key="keyEquivalentModifierMask"/>
                                             <connections>
@@ -47,7 +60,9 @@
                 <customObject id="Voe-Tx-rLC" customClass="AppDelegate" customModule="Apollo_Music" customModuleProvider="target">
                     <connections>
                         <outlet property="connectionStatus" destination="LzX-ld-JYa" id="Bhg-2i-Vee"/>
+                        <outlet property="launchAtLoginToggle" destination="c7k-Pk-VpV" id="V5z-0s-DZg"/>
                         <outlet property="menu" destination="uQy-DD-JDr" id="XLG-xK-XSg"/>
+                        <outlet property="showEmojisToggle" destination="Np6-vA-djK" id="cjq-u5-Zh5"/>
                     </connections>
                 </customObject>
                 <customObject id="YLy-65-1bz" customClass="NSFontManager"/>
@@ -93,7 +108,7 @@
                                 <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyUpOrDown" image="NSApplicationIcon" id="0UI-Ho-MII"/>
                             </imageView>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="98L-JG-fmW">
-                                <rect key="frame" x="190" y="142" width="127" height="26"/>
+                                <rect key="frame" x="190" y="144" width="127" height="26"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <textFieldCell key="cell" lineBreakMode="clipping" title="Apollo Music" id="CZj-xt-xL5">
                                     <font key="font" textStyle="title1" name=".SFNS-Regular"/>
@@ -102,7 +117,7 @@
                                 </textFieldCell>
                             </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bSs-w8-Lsf">
-                                <rect key="frame" x="190" y="118" width="140" height="16"/>
+                                <rect key="frame" x="190" y="120" width="140" height="16"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <textFieldCell key="cell" lineBreakMode="clipping" title="Version X.X (XXXXXX)" id="xRK-Lq-J5N">
                                     <font key="font" metaFont="system"/>
@@ -111,28 +126,70 @@
                                 </textFieldCell>
                             </textField>
                             <box verticalHuggingPriority="750" fixedFrame="YES" boxType="separator" translatesAutoresizingMaskIntoConstraints="NO" id="ZL2-Xy-hlU">
-                                <rect key="frame" x="192" y="107" width="268" height="5"/>
+                                <rect key="frame" x="192" y="109" width="268" height="5"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                             </box>
                             <stackView distribution="fill" orientation="vertical" alignment="leading" spacing="5" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" fixedFrame="YES" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="By8-Wv-it2">
-                                <rect key="frame" x="192" y="43" width="231" height="58"/>
+                                <rect key="frame" x="192" y="27" width="267" height="76"/>
                                 <subviews>
                                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="WUR-iq-nkU">
-                                        <rect key="frame" x="-2" y="42" width="168" height="16"/>
+                                        <rect key="frame" x="-2" y="60" width="168" height="16"/>
                                         <textFieldCell key="cell" lineBreakMode="clipping" title="Developer: Pedro Cavaleiro" id="w2U-UP-HN6">
                                             <font key="font" metaFont="system"/>
                                             <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                             <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                         </textFieldCell>
                                     </textField>
-                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="wg6-ar-yMi">
-                                        <rect key="frame" x="-2" y="21" width="235" height="16"/>
-                                        <textFieldCell key="cell" lineBreakMode="clipping" title="Packages: SwordRPC by Marcus Zhou" id="DaQ-b9-Cff">
-                                            <font key="font" metaFont="system"/>
-                                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                                        </textFieldCell>
-                                    </textField>
+                                    <stackView distribution="fill" orientation="horizontal" alignment="top" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uAu-ga-3Kq">
+                                        <rect key="frame" x="0.0" y="21" width="267" height="34"/>
+                                        <subviews>
+                                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="q9P-Jw-qID">
+                                                <rect key="frame" x="-2" y="18" width="66" height="16"/>
+                                                <textFieldCell key="cell" lineBreakMode="clipping" title="Packages:" id="vBL-SW-tE2">
+                                                    <font key="font" usesAppearanceFont="YES"/>
+                                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                                </textFieldCell>
+                                            </textField>
+                                            <stackView distribution="fill" orientation="vertical" alignment="leading" spacing="2" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="r6N-xW-1cj">
+                                                <rect key="frame" x="70" y="0.0" width="197" height="34"/>
+                                                <subviews>
+                                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="6U2-u9-rAr">
+                                                        <rect key="frame" x="-2" y="18" width="170" height="16"/>
+                                                        <textFieldCell key="cell" lineBreakMode="clipping" title="SwordRPC by Marcus Zhou" id="BaD-ae-RPY">
+                                                            <font key="font" usesAppearanceFont="YES"/>
+                                                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                                        </textFieldCell>
+                                                    </textField>
+                                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="2jc-tK-5Vb">
+                                                        <rect key="frame" x="-2" y="0.0" width="201" height="16"/>
+                                                        <textFieldCell key="cell" lineBreakMode="clipping" title="LaunchAtLogin by Sindre Sorhus" id="hdL-XC-2Je">
+                                                            <font key="font" metaFont="system"/>
+                                                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                                        </textFieldCell>
+                                                    </textField>
+                                                </subviews>
+                                                <visibilityPriorities>
+                                                    <integer value="1000"/>
+                                                    <integer value="1000"/>
+                                                </visibilityPriorities>
+                                                <customSpacing>
+                                                    <real value="3.4028234663852886e+38"/>
+                                                    <real value="3.4028234663852886e+38"/>
+                                                </customSpacing>
+                                            </stackView>
+                                        </subviews>
+                                        <visibilityPriorities>
+                                            <integer value="1000"/>
+                                            <integer value="1000"/>
+                                        </visibilityPriorities>
+                                        <customSpacing>
+                                            <real value="3.4028234663852886e+38"/>
+                                            <real value="3.4028234663852886e+38"/>
+                                        </customSpacing>
+                                    </stackView>
                                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="phJ-NG-8va">
                                         <rect key="frame" x="-2" y="0.0" width="121" height="16"/>
                                         <textFieldCell key="cell" lineBreakMode="clipping" title="App Logo: Kevin M." id="W7I-4V-8QF">
