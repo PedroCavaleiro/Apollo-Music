@@ -11,6 +11,7 @@
 		3F4BC9C22554250B0023752D /* LaunchAtLogin in Frameworks */ = {isa = PBXBuildFile; productRef = 3F4BC9C12554250B0023752D /* LaunchAtLogin */; };
 		3F78D260255067EE00AB5711 /* SwordRPC in Frameworks */ = {isa = PBXBuildFile; productRef = 3F78D25F255067EE00AB5711 /* SwordRPC */; };
 		3FA450DC254F46E50063B4C5 /* MediaRemote.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FA450DB254F46E50063B4C5 /* MediaRemote.framework */; };
+		3FCAACBF25F25C000033B597 /* MusicBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FCAACB625F257510033B597 /* MusicBridge.m */; };
 		3FD93F70254F14C100607296 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FD93F6F254F14C100607296 /* AppDelegate.swift */; };
 		3FD93F74254F14C200607296 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3FD93F73254F14C200607296 /* Assets.xcassets */; };
 		3FD93F77254F14C200607296 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3FD93F75254F14C200607296 /* Main.storyboard */; };
@@ -23,6 +24,9 @@
 		3F13408025540DAB00630CA1 /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
 		3FA450CB254F43600063B4C5 /* apollo-music-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "apollo-music-Bridging-Header.h"; sourceTree = "<group>"; };
 		3FA450DB254F46E50063B4C5 /* MediaRemote.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaRemote.framework; path = ../../../../System/Library/PrivateFrameworks/MediaRemote.framework; sourceTree = "<group>"; };
+		3FCAACB425F256860033B597 /* MusicAPI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MusicAPI.h; sourceTree = "<group>"; };
+		3FCAACB525F257160033B597 /* MusicBridge.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MusicBridge.h; sourceTree = "<group>"; };
+		3FCAACB625F257510033B597 /* MusicBridge.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MusicBridge.m; sourceTree = "<group>"; };
 		3FD93F6C254F14C100607296 /* Apollo Music.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Apollo Music.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3FD93F6F254F14C100607296 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3FD93F73254F14C200607296 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -86,6 +90,9 @@
 				3FE66A9B254F49B500331E85 /* NowPlaying.swift */,
 				3FE66ABE255060C400331E85 /* AboutViewController.swift */,
 				3F13408025540DAB00630CA1 /* Settings.swift */,
+				3FCAACB425F256860033B597 /* MusicAPI.h */,
+				3FCAACB525F257160033B597 /* MusicBridge.h */,
+				3FCAACB625F257510033B597 /* MusicBridge.m */,
 			);
 			path = "apollo-music";
 			sourceTree = "<group>";
@@ -189,6 +196,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3FCAACBF25F25C000033B597 /* MusicBridge.m in Sources */,
 				3FD93F70254F14C100607296 /* AppDelegate.swift in Sources */,
 				3FE66A9C254F49B500331E85 /* NowPlaying.swift in Sources */,
 				3FE66ABF255060C400331E85 /* AboutViewController.swift in Sources */,
