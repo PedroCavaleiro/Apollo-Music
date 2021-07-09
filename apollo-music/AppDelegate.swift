@@ -15,7 +15,7 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSMenuDelegate {
     @IBOutlet weak var menu: NSMenu!
     @IBOutlet weak var connectionStatus: NSMenuItem!
     
-    let mediaPlayerHelper = MediaPlayerHelper()
+//    let mediaPlayerHelper = MediaPlayerHelper()
     
     var rpc: SwordRPC?
     
@@ -30,35 +30,36 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSMenuDelegate {
     }
     
     func applicationDidFinishLaunching(_ aNotification: Notification) {
-        NotificationCenter.default.addObserver(self, selector: #selector(mediaPlaybackChanged(_:)), name: MediaPlayerHelper.kNowPlayingItemDidChange, object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(playingStatusChanged(_:)), name: MediaPlayerHelper.kNowPlayingStatusChange, object: nil)
-        configureRPC()
+//        NotificationCenter.default.addObserver(self, selector: #selector(mediaPlaybackChanged(_:)), name: MediaPlayerHelper.kNowPlayingItemDidChange, object: nil)
+//        NotificationCenter.default.addObserver(self, selector: #selector(playingStatusChanged(_:)), name: MediaPlayerHelper.kNowPlayingStatusChange, object: nil)
+//        configureRPC()
+        
     }
     
-    func configureRPC() {
-        rpc = SwordRPC(appId: "772579806515691560", handlerInterval: 500)
-        rpc!.onConnect { rpc in
-            self.isStartup = false
-            self.rcpConnected = true
-            self.connectionStatus.title = "Connected to Discord"
-            if self.mediaPlayerHelper.nowPlayingItem.playing {
-                self.configureRichPresence()
-            }
-        }
-        rpc!.onDisconnect { rpc, code, msg in
-            self.rcpConnected = false
-            self.connectionStatus.title = "Disconnected from Discord"
-            print("Disconnected \(String(describing: msg))")
-        }
-
-        rpc!.onError { rpc, code, msg in
-            self.connectionStatus.title = "Error connecting to Discord (\(code))"
-            self.rpcError = true
-            print("Error \(msg)")
-        }
-        
-        rpc!.connect()
-    }
+//    func configureRPC() {
+//        rpc = SwordRPC(appId: "772579806515691560", handlerInterval: 500)
+//        rpc!.onConnect { rpc in
+//            self.isStartup = false
+//            self.rcpConnected = true
+//            self.connectionStatus.title = "Connected to Discord"
+//            if self.mediaPlayerHelper.nowPlayingItem.playing {
+//                self.configureRichPresence()
+//            }
+//        }
+//        rpc!.onDisconnect { rpc, code, msg in
+//            self.rcpConnected = false
+//            self.connectionStatus.title = "Disconnected from Discord"
+//            print("Disconnected \(String(describing: msg))")
+//        }
+//
+//        rpc!.onError { rpc, code, msg in
+//            self.connectionStatus.title = "Error connecting to Discord (\(code))"
+//            self.rpcError = true
+//            print("Error \(msg)")
+//        }
+//
+//        rpc!.connect()
+//    }
 
     func applicationWillTerminate(_ aNotification: Notification) {
         // Insert code here to tear down your application
@@ -77,11 +78,11 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSMenuDelegate {
     }
     
     @objc func playingStatusChanged(_ notification: Notification) {
-        if mediaPlayerHelper.nowPlayingItem.playing {
-            configureRichPresence()
-        } else {
-            rpc!.disconnect()
-        }
+//        if mediaPlayerHelper.nowPlayingItem.playing {
+//            configureRichPresence()
+//        } else {
+//            rpc!.disconnect()
+//        }
     }
     
     @objc func mediaPlaybackChanged(_ notification: Notification) {
@@ -93,8 +94,8 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSMenuDelegate {
     func configureRichPresence() {
         if rcpConnected {
             var presence = RichPresence()
-            presence.details = "🎵 \(mediaPlayerHelper.nowPlayingItem.title ?? "  ")"
-            presence.state = "👤 \(mediaPlayerHelper.nowPlayingItem.artist ?? "  ")"
+//            presence.details = "🎵 \(mediaPlayerHelper.nowPlayingItem.title ?? "  ")"
+//            presence.state = "👤 \(mediaPlayerHelper.nowPlayingItem.artist ?? "  ")"
             presence.assets.largeImage = "apple_music_icon_rounded"
             presence.assets.largeText = "Apple Music"
             self.rpc!.setPresence(presence)
@@ -102,7 +103,7 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSMenuDelegate {
             if !isStartup {
                 rpc = nil
                 DispatchQueue.main.async {
-                    self.configureRPC()
+//                    self.configureRPC()
                 }
             }
         }

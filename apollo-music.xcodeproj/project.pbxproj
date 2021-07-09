@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		3F78D260255067EE00AB5711 /* SwordRPC in Frameworks */ = {isa = PBXBuildFile; productRef = 3F78D25F255067EE00AB5711 /* SwordRPC */; };
-		3FA450DC254F46E50063B4C5 /* MediaRemote.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FA450DB254F46E50063B4C5 /* MediaRemote.framework */; };
 		3FD93F70254F14C100607296 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FD93F6F254F14C100607296 /* AppDelegate.swift */; };
 		3FD93F74254F14C200607296 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3FD93F73254F14C200607296 /* Assets.xcassets */; };
 		3FD93F77254F14C200607296 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3FD93F75254F14C200607296 /* Main.storyboard */; };
@@ -18,7 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		3FA450CB254F43600063B4C5 /* apollo-music-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "apollo-music-Bridging-Header.h"; sourceTree = "<group>"; };
+		3F25B4BB2662FF050024AE1D /* api_app_authentication_macos.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = api_app_authentication_macos.framework; path = "../api-app-authentication/bin/Swift/api_app_authentication_macos.framework"; sourceTree = "<group>"; };
 		3FA450DB254F46E50063B4C5 /* MediaRemote.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaRemote.framework; path = ../../../../System/Library/PrivateFrameworks/MediaRemote.framework; sourceTree = "<group>"; };
 		3FD93F6C254F14C100607296 /* Apollo Music.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Apollo Music.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3FD93F6F254F14C100607296 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -37,7 +36,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				3F78D260255067EE00AB5711 /* SwordRPC in Frameworks */,
-				3FA450DC254F46E50063B4C5 /* MediaRemote.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -47,6 +45,7 @@
 		3FA450DA254F46E50063B4C5 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				3F25B4BB2662FF050024AE1D /* api_app_authentication_macos.framework */,
 				3FA450DB254F46E50063B4C5 /* MediaRemote.framework */,
 			);
 			name = Frameworks;
@@ -75,7 +74,6 @@
 				3FD93F6F254F14C100607296 /* AppDelegate.swift */,
 				3FD93F73254F14C200607296 /* Assets.xcassets */,
 				3FD93F79254F14C200607296 /* apollo-music.entitlements */,
-				3FA450CB254F43600063B4C5 /* apollo-music-Bridging-Header.h */,
 				3FD93F78254F14C200607296 /* Info.plist */,
 				3FD93F75254F14C200607296 /* Main.storyboard */,
 				3FE66A9E254F4BA200331E85 /* MediaPlayerHelper.swift */,
@@ -115,7 +113,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1210;
-				LastUpgradeCheck = 1210;
+				LastUpgradeCheck = 1250;
 				TargetAttributes = {
 					3FD93F6B254F14C100607296 = {
 						CreatedOnToolsVersion = 12.1;
@@ -304,6 +302,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = "apollo-music/apollo-music.entitlements";
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 201102;
@@ -316,7 +315,6 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "pt.pedrocavaleiro.macos.apollo-music";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "apollo-music/apollo-music-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				SYSTEM_FRAMEWORK_SEARCH_PATHS = (
@@ -333,6 +331,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = "apollo-music/apollo-music.entitlements";
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 201102;
@@ -345,7 +344,6 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "pt.pedrocavaleiro.macos.apollo-music";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "apollo-music/apollo-music-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				SYSTEM_FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
